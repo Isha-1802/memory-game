@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7e8e1;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #fff2f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.game-title {
+    font-size: 2rem;
+    color: #b36b6b;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.game-info div {
+    font-size: 1.1rem;
+}
+
+.score, .timer, .level {
+    color: #b36b6b;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #f2d8d8;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: transparent;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card.flip {
+    background-color: #ffe6e6;
+    color: #b36b6b;
+}
+
+.card.matched {
+    background-color: #ffcccc;
+    cursor: not-allowed;
+}
+
+.reset-btn {
+    background-color: #f7a1a1;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #e88b8b;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.level-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e88b8b;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.level-up-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Game Over Animation */
+.game-container.game-over {
+    background-color: #f7d2d2;
+    transition: background-color 1s ease;
+}
+
+.game-container.game-over .game-title {
+    font-size: 2.5rem;
+    color: #ff5555;
+    transition: font-size 1s ease, color 1s ease;
+}
+
+.game-container.game-over .score,
+.game-container.game-over .level {
+    font-size: 1.5rem;
+    transition: font-size 1s ease;
+}

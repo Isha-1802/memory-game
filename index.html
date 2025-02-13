@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">Memory Game</h1>
+        <div class="game-info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="timer">Time: <span id="timer">00:00</span></div>
+            <div class="level">Level: <span id="level">1</span></div>
+        </div>
+        <div id="levelMessage" class="level-message"></div> <!-- Added for level transitions -->
+        <div class="board" id="board"></div>
+        <button class="reset-btn" id="reset">Restart Game</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
